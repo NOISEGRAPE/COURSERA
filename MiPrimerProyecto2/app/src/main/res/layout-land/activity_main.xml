@@ -22,14 +22,14 @@
         android:layout_alignBottom="@+id/button2"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="43dp" />
+        android:layout_marginBottom="41dp" />
 
     <Button
         android:text="@string/titulo_boton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button2"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="51dp"
         android:layout_marginLeft="83dp"
         android:layout_marginStart="83dp"
         android:layout_alignParentTop="true"
