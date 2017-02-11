@@ -1,7 +1,0 @@
-#Fri Feb 10 17:45:06 CST 2017
-base.0=C\:\\Users\\Miguel\\Documents\\COURSERA\\NOISEGRAPE\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_5e8b9a8934184f785cf9f914d8f5696e50f7fc82
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=C\:\\Users\\Miguel\\Documents\\COURSERA\\NOISEGRAPE\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_6ccb5852dc80f2ff172e7c3338dd4bf1942c6857\\classes.dex
-base.1=C\:\\Users\\Miguel\\Documents\\COURSERA\\NOISEGRAPE\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_6ccb5852dc80f2ff172e7c3338dd4bf1942c6857
-file.0=C\:\\Users\\Miguel\\Documents\\COURSERA\\NOISEGRAPE\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_5e8b9a8934184f785cf9f914d8f5696e50f7fc82\\classes.dex
