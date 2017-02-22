@@ -12,7 +12,26 @@
     tools:context="com.example.miguegrape.menuopcionescontextopopup.MainActivity">
 
     <TextView
+        android:id="@+id/tvNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="@string/nombre_persona"
+        android:textSize="@dimen/texto_persona"
+        />
+
+
+    <ImageView
+        android:id="@+id/imgImagen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pikachu"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="levantarmenuPopUp"
+
+        />
+
+
+
+
 </RelativeLayout>
