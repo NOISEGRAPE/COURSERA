@@ -9,4 +9,5 @@
     <string name="nombre_persona">NOISEGRAPE</string>
     <string name="menu_view">View Image</string>
     <string name="menu_view_detail">View Image Detail</string>
+    <string name="menu_refresh">Refresh</string>
 </resources>

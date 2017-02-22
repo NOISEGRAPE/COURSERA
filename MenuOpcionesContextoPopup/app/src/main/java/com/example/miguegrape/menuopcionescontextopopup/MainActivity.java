@@ -40,6 +40,14 @@ public class MainActivity extends AppCompatActivity {
 
 
         switch (item.getItemId()){
+
+            case R.id.mRefresh:
+
+                Toast.makeText(getBaseContext(),getResources().getString(R.string.menu_refresh),Toast.LENGTH_LONG).show();
+
+                break;
+
+
             case R.id.mAbout:
 
                 Intent intent = new Intent(this,ActivityAbout.class);
@@ -50,8 +58,11 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(this,ActivitySettings.class);
                 startActivity(i);
                 break;
-        }
 
+
+
+
+        }
 
 
         return super.onOptionsItemSelected(item);
@@ -126,6 +137,12 @@ public class MainActivity extends AppCompatActivity {
 
 
      }
+
+
+
+
+
+
 
 
 }
