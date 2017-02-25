@@ -1,6 +1,9 @@
 package com.example.miguegrape.mascotas;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,6 +11,8 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
+
 
 import java.util.ArrayList;
 /**
@@ -61,11 +66,56 @@ public class MascotasActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.favoritos:
+            case R.id.mFavoritos:
                 Intent intent = new Intent(this, FavoritosActivity.class);
                 startActivity(intent);
                 return true;
+
+
+            case R.id.mContacto:
+                showDialogoContacto();
+                break;
+
+
+
+            case R.id.mAcercaDe:
+                showDialogoAcercaDe();
+                break;
+
+
         }
         return super.onOptionsItemSelected(item);
     }
+
+
+
+
+
+    private void showDialogoContacto() {
+        final Dialog dialog = new Dialog(MascotasActivity.this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.activity_contacto);
+
+        dialog.getWindow().setBackgroundDrawable(
+                new ColorDrawable(Color.WHITE));
+
+
+        dialog.show();
+    }
+
+    private void showDialogoAcercaDe() {
+        final Dialog dialog = new Dialog(MascotasActivity.this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.activity_acerca_de);
+
+        dialog.getWindow().setBackgroundDrawable(
+                new ColorDrawable(Color.WHITE));
+
+
+        dialog.show();
+    }
+
+
+
+
 }
