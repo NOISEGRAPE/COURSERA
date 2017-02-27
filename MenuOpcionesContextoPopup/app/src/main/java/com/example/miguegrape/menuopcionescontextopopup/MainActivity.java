@@ -21,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        //getSupportFragmentManager().beginTransaction().add(R.id.mifragment,new MiFragment()).commit();
+
         TextView tvNombre  = (TextView) findViewById(R.id.tvNombre);
 
         registerForContextMenu(tvNombre);
