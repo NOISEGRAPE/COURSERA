@@ -16,27 +16,26 @@ import android.view.Window;
 
 
 import android.support.v4.view.ViewPager;
-import android.support.design.widget.TabLayout;
-import android.support.v7.widget.Toolbar;
 import android.support.v4.app.Fragment;
-import android.widget.Toast;
-
-
 import com.example.miguegrape.mascotas.FragmentDerecha;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.ArrayList;
 
 
 public class MascotasActivity extends AppCompatActivity {
 
+    private ArrayList<Mascota> mascotas;
+    private RecyclerView listaMascotas;
+
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
 
-    private ArrayList<Mascota> mascotas;
-    private RecyclerView listaMascotas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +46,7 @@ public class MascotasActivity extends AppCompatActivity {
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         viewPager = (ViewPager) findViewById(R.id.viewPager);
 
-        setupViewPager();
+
 
         if(toolbar!=null){
             setSupportActionBar(toolbar);
@@ -59,14 +58,18 @@ public class MascotasActivity extends AppCompatActivity {
         miActionBar.setTitle("                Petagram");
         setSupportActionBar(miActionBar);
 
+
         listaMascotas = (RecyclerView) findViewById(R.id.rvMascotas);
 
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
-
         listaMascotas.setLayoutManager(llm);
+
         inicializarListaMascotas();
         inicializarAdaptador();
+
+
+
     }
 
     public void inicializarListaMascotas(){
@@ -139,22 +142,6 @@ public class MascotasActivity extends AppCompatActivity {
 
 
         dialog.show();
-    }
-
-    private ArrayList<Fragment> agregarFragments(){
-        ArrayList<Fragment> fragments = new ArrayList<Fragment>();
-        fragments.add(new RecyclerViewFragment());
-        fragments.add(new FragmentDerecha());
-
-        return fragments;
-    }
-
-    private void setupViewPager(){
-        viewPager.setAdapter(new PageAdapter(getSupportFragmentManager(),agregarFragments()));
-        tabLayout.setupWithViewPager(viewPager);
-
-        tabLayout.getTabAt(0).setIcon(R.drawable.home);
-        tabLayout.getTabAt(1).setIcon(R.drawable.mascotaprofile);
     }
 
 
