@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,12 +15,25 @@ import android.view.MenuItem;
 import android.view.Window;
 
 
+import android.support.v4.view.ViewPager;
+import android.support.design.widget.TabLayout;
+import android.support.v7.widget.Toolbar;
+import android.support.v4.app.Fragment;
+import android.widget.Toast;
+
+
+import com.example.miguegrape.mascotas.FragmentDerecha;
+
+
 import java.util.ArrayList;
-/**
- * Created by Miguel on 20/02/2017.
- */
+
 
 public class MascotasActivity extends AppCompatActivity {
+
+    private Toolbar toolbar;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+
 
     private ArrayList<Mascota> mascotas;
     private RecyclerView listaMascotas;
@@ -28,6 +42,18 @@ public class MascotasActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mascotas);
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
+
+        setupViewPager();
+
+        if(toolbar!=null){
+            setSupportActionBar(toolbar);
+        }
+
+
         Toolbar miActionBar = (Toolbar) findViewById(R.id.miActionBar);
         miActionBar.setLogo(R.drawable.huella);
         miActionBar.setTitle("                Petagram");
@@ -113,6 +139,22 @@ public class MascotasActivity extends AppCompatActivity {
 
 
         dialog.show();
+    }
+
+    private ArrayList<Fragment> agregarFragments(){
+        ArrayList<Fragment> fragments = new ArrayList<Fragment>();
+        fragments.add(new RecyclerViewFragment());
+        fragments.add(new FragmentDerecha());
+
+        return fragments;
+    }
+
+    private void setupViewPager(){
+        viewPager.setAdapter(new PageAdapter(getSupportFragmentManager(),agregarFragments()));
+        tabLayout.setupWithViewPager(viewPager);
+
+        tabLayout.getTabAt(0).setIcon(R.drawable.home);
+        tabLayout.getTabAt(1).setIcon(R.drawable.mascotaprofile);
     }
 
 
