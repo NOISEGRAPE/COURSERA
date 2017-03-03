@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Mascotas</string>
+    <string name="app_name">MascotasApp</string>
 
     <string name="action_settings">Settings</string>
     <string name="hello_blank_fragment">Hola Petagram</string>
