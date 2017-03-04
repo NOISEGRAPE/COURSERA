@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -21,21 +20,26 @@
             app:civ_shadow="true"
             app:civ_shadow_radius="10"
             app:civ_shadow_color="#8BC34A"/>
+
     </LinearLayout>
 
     <TextView
         android:text="@string/titulo_mascota"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:id="@+id/txtMascota"
         android:textSize="24sp"
-        android:textAlignment="center" />
+        android:textAlignment="center">
+    </TextView>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvMiMascota"
-        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbars="horizontal">
+
+    </android.support.v7.widget.RecyclerView>
+
 
 </LinearLayout>

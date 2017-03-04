@@ -1,4 +1,4 @@
-package com.noisegrape.mascotasapp;
+package com.noisegrape.mascotasapp.pojo;
 
 /**
  * Created by Miguel on 02/03/2017.

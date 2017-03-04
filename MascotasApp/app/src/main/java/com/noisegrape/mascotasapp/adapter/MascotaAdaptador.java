@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.noisegrape.mascotasapp.Mascota;
+import com.noisegrape.mascotasapp.pojo.Mascota;
 import com.noisegrape.mascotasapp.R;
 
 import java.util.ArrayList;

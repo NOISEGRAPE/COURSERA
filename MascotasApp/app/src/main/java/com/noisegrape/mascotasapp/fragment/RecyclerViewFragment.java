@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.noisegrape.mascotasapp.Mascota;
+import com.noisegrape.mascotasapp.pojo.Mascota;
 import com.noisegrape.mascotasapp.R;
 import com.noisegrape.mascotasapp.adapter.MascotaAdaptador;
 

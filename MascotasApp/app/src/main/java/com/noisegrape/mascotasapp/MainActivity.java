@@ -120,5 +120,8 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(new PageAdapter(getSupportFragmentManager(),agregarFragments()));
         tabLayout.setupWithViewPager(viewPager);
 
+        //tabLayout.getTabAt(0).setIcon(R.drawable.);
+        //tabLayout.getTabAt(1).setIcon(R.drawable.);
+
     }
 }

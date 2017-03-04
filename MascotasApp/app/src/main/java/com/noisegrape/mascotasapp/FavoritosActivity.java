@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
 import com.noisegrape.mascotasapp.adapter.MascotaAdaptador;
+import com.noisegrape.mascotasapp.pojo.Mascota;
 
 import java.util.ArrayList;
 
