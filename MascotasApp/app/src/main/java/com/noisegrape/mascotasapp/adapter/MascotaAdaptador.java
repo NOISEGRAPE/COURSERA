@@ -18,7 +18,7 @@ import java.util.ArrayList;
  * Created by Miguel on 02/03/2017.
  */
 
-public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.MascotaViewHolder> {
+public class  MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.MascotaViewHolder> {
     ArrayList<Mascota> mascotas;
     Activity activity;
 
@@ -41,6 +41,7 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
         mascotaViewHolder.imgCantRaiting.setImageResource(mascota.getImgCantRaiting());
         mascotaViewHolder.tvNombreMascota.setText(mascota.getNombre());
         mascotaViewHolder.tvCantRaiting.setText(mascota.getCantLikes());
+        //mascotaViewHolder.tvCantRaiting.setText(String.valueOf(mascota.getCantLikes())+ "Likes");
 
         mascotaViewHolder.imgMegusta.setOnClickListener(new View.OnClickListener() {
             @Override

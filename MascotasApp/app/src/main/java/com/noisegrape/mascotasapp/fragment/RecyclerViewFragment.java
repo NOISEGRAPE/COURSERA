@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import com.noisegrape.mascotasapp.pojo.Mascota;
 import com.noisegrape.mascotasapp.R;
 import com.noisegrape.mascotasapp.adapter.MascotaAdaptador;
+import com.noisegrape.mascotasapp.presentador.IRecyclerViewFragmentPresenter;
+import com.noisegrape.mascotasapp.presentador.RecyclerViewFragmentPresenter;
 
 import java.util.ArrayList;
 
@@ -19,10 +21,11 @@ import java.util.ArrayList;
  * Created by Miguel on 01/03/2017.
  */
 
-public class RecyclerViewFragment extends Fragment {
+public class RecyclerViewFragment extends Fragment implements IRecyclerViewFragmentView {
 
     private ArrayList<Mascota> mascotas;
     private RecyclerView listaMascotas;
+    private IRecyclerViewFragmentPresenter presenter;
 
     @Nullable
     @Override
@@ -30,34 +33,33 @@ public class RecyclerViewFragment extends Fragment {
         //return super.onCreateView(inflater, container, savedInstanceState);
         View v = inflater.inflate(R.layout.fragment_recyclerview,container,false);
 
-
-
         listaMascotas = (RecyclerView) v.findViewById(R.id.rvMascotas);
 
-        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
-        listaMascotas.setLayoutManager(llm);
-
-        inicializarListaMascotas();
-        inicializarAdaptador();
-
+        presenter = new RecyclerViewFragmentPresenter(this,getContext());
 
         return v;
     }
 
 
-    public void inicializarListaMascotas(){
-        mascotas = new ArrayList<Mascota>();
-        mascotas.add(new Mascota("Roco", "23", R.drawable.mascota1, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));
-        mascotas.add(new Mascota("Shiva", "15", R.drawable.mascota2, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));
-        mascotas.add(new Mascota("Aime", "12", R.drawable.mascota3, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));
-        mascotas.add(new Mascota("Bolt", "18", R.drawable.mascota4, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));
-        mascotas.add(new Mascota("Scooby", "26", R.drawable.mascota5, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));
+    @Override
+    public void generarLinearLayoutVertical() {
+
+        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        listaMascotas.setLayoutManager(llm);
+
     }
 
-    public void inicializarAdaptador(){
+    @Override
+    public MascotaAdaptador crearAdaptador(ArrayList<Mascota> mascotas) {
         MascotaAdaptador adaptador = new MascotaAdaptador(mascotas, getActivity());
-        listaMascotas.setAdapter(adaptador);
+        return adaptador;
     }
 
+    @Override
+    public void inicializarAdaptadorRV(MascotaAdaptador adaptador) {
+
+        listaMascotas.setAdapter(adaptador);
+
+    }
 }

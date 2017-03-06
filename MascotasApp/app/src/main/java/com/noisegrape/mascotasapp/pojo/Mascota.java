@@ -5,6 +5,8 @@ package com.noisegrape.mascotasapp.pojo;
  */
 
 public class Mascota {
+
+    private int id;
     private String nombre;
     private String cantLikes;
     private int foto;
@@ -57,5 +59,13 @@ public class Mascota {
 
     public void setFoto(int foto) {
         this.foto = foto;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

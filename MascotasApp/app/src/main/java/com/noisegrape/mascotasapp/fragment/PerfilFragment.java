@@ -56,12 +56,12 @@ public class PerfilFragment extends Fragment {
 
         mascotas = new ArrayList<Mascota>();
 
-        mascotas.add(new Mascota("Bacondo", "26", R.drawable.perrito, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));
-        mascotas.add(new Mascota("Bacondo", "23", R.drawable.perrito, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));
-        mascotas.add(new Mascota("Bacondo", "18", R.drawable.perrito, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));
-        mascotas.add(new Mascota("Bacondo", "15", R.drawable.perrito, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));
-        mascotas.add(new Mascota("Bacondo", "12", R.drawable.perrito, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));
-        mascotas.add(new Mascota("Bacondo", " 8", R.drawable.perrito, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));
+        mascotas.add(new Mascota("", "26", R.drawable.perrito, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));
+        mascotas.add(new Mascota("", "23", R.drawable.perrito, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));
+        mascotas.add(new Mascota("", "18", R.drawable.perrito, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));
+        mascotas.add(new Mascota("", "15", R.drawable.perrito, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));
+        mascotas.add(new Mascota("", "12", R.drawable.perrito, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));
+        mascotas.add(new Mascota("", " 8", R.drawable.perrito, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));
 
 
 
