@@ -31,9 +31,10 @@ public class BaseDatos extends SQLiteOpenHelper {
 
                 ConstantesBaseDatos.TABLE_MASCOTAS_ID     + "INTEGER PRIMARY KEY AUTOINCREMENT,"+
 
-                ConstantesBaseDatos.TABLE_MASCOTAS_NOMBRE + " TEXT, " +
+                ConstantesBaseDatos.TABLE_MASCOTAS_FOTO   + " INTEGER, " +
 
-                ConstantesBaseDatos.TABLE_MASCOTAS_FOTO   + " INTEGER " +
+                ConstantesBaseDatos.TABLE_MASCOTAS_NOMBRE + " TEXT " +
+
 
                 ")";
 
@@ -75,14 +76,16 @@ public class BaseDatos extends SQLiteOpenHelper {
 
         SQLiteDatabase db = this.getWritableDatabase();
 
-        Cursor registros = db.rawQuery(query, null);
+        Cursor cursor = db.rawQuery(query, null);
 
-        while (registros.moveToNext()){
+        while (cursor.moveToNext()){
 
             Mascota mascotaActual = new Mascota();
-            mascotaActual.setId(registros.getInt(0));
-            mascotaActual.setNombre(registros.getString(1));
-            mascotaActual.setFoto(registros.getInt(2));
+
+            mascotaActual.setId(cursor.getInt(0));
+            mascotaActual.setFoto(cursor.getInt(1));
+            mascotaActual.setNombre(cursor.getString(2));
+
 
             mascotas.add(mascotaActual);
 
@@ -99,5 +102,11 @@ public class BaseDatos extends SQLiteOpenHelper {
         db.insert(ConstantesBaseDatos.TABLE_MASCOTAS,null, contentValues);
         db.close();
 
+    }
+
+    public void insertarLikeContacto(ContentValues contentValues){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.insert(ConstantesBaseDatos.TABLE_LIKES_MASCOTA,null,contentValues);
+        db.close();
     }
 }
