@@ -24,6 +24,7 @@ public class ConstructorMascotas {
     public ArrayList<Mascota> obtenerDatos(){
 
         ArrayList<Mascota> mascotas = new ArrayList<>();
+
         /*mascotas.add(new Mascota("Roco", "23", R.drawable.mascota1, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));
         mascotas.add(new Mascota("Shiva", "15", R.drawable.mascota2, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));
         mascotas.add(new Mascota("Aime", "12", R.drawable.mascota3, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));

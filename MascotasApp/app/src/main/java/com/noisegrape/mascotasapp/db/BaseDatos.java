@@ -27,7 +27,7 @@ public class BaseDatos extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        String queryCrearTablaMascota = "CREATE TABLE"+ ConstantesBaseDatos.TABLE_MASCOTAS + "(" +
+        String queryCrearTablaMascota = "CREATE TABLE "+ ConstantesBaseDatos.TABLE_MASCOTAS + "(" +
 
                 ConstantesBaseDatos.TABLE_MASCOTAS_ID     + "INTEGER PRIMARY KEY AUTOINCREMENT,"+
 
@@ -80,7 +80,6 @@ public class BaseDatos extends SQLiteOpenHelper {
             mascotaActual.setId(registros.getInt(0));
             mascotaActual.setNombre(registros.getString(1));
             mascotaActual.setFoto(registros.getInt(2));
-
 
             mascotas.add(mascotaActual);
 
