@@ -21,6 +21,10 @@ public class Mascota {
         this.imgCantRaiting = imgCantRaiting;
     }
 
+    public Mascota() {
+
+    }
+
     public int getImgMegusta() {
         return imgMegusta;
     }
