@@ -38,6 +38,9 @@ public class BaseDatos extends SQLiteOpenHelper {
                 ")";
 
 
+        db.execSQL(queryCrearTablaMascota);
+
+
         String queryCrearTablaLikesMascota = "CREATE TABLE"+ ConstantesBaseDatos.TABLE_LIKES_MASCOTA + "(" +
 
                 ConstantesBaseDatos.TABLE_LIKES_MASCOTA_ID + "INTEGER PRIMARY KEY AUTOINCREMENT,"+
@@ -53,7 +56,7 @@ public class BaseDatos extends SQLiteOpenHelper {
                 ")";
 
 
-        db.execSQL(queryCrearTablaMascota);
+
         db.execSQL(queryCrearTablaLikesMascota);
 
     }
