@@ -2,7 +2,6 @@ package com.noisegrape.mascotasapp.fragment;
 
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,8 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.noisegrape.mascotasapp.R;
-import com.noisegrape.mascotasapp.adapter.MascotaAdaptador;
-import com.noisegrape.mascotasapp.pojo.Mascota;
+import com.noisegrape.mascotasapp.adapter.Like;
+import com.noisegrape.mascotasapp.adapter.LikeAdaptador;
 
 import java.util.ArrayList;
 
@@ -23,8 +22,8 @@ import java.util.ArrayList;
  */
 public class PerfilFragment extends Fragment {
 
-    private ArrayList<Mascota> mascotas;
-    private RecyclerView listaMascotas;
+    ArrayList<Like> likes;
+    private RecyclerView rvMiMascota;
 
 
     public PerfilFragment() {
@@ -32,45 +31,50 @@ public class PerfilFragment extends Fragment {
     }
 
 
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
         View v = inflater.inflate(R.layout.fragment_perfil, container, false);
 
-        listaMascotas = (RecyclerView) v.findViewById(R.id.rvMiMascota);
+        rvMiMascota = (RecyclerView) v.findViewById(R.id.rvMiMascota);
         GridLayoutManager glm = new GridLayoutManager(getActivity(),3);
+
         glm.setOrientation(LinearLayoutManager.VERTICAL);
-        listaMascotas.setLayoutManager(glm);
+
+        rvMiMascota.setLayoutManager(glm);
 
         iniciarListaMascotas();
-        inicializarAdaptador();
+        iniciarAdaptador();
+
         return v;
     }
 
-
+    public void iniciarAdaptador(){
+        LikeAdaptador adaptador = new LikeAdaptador(likes);
+        rvMiMascota.setAdapter(adaptador);
+    }
 
     public void iniciarListaMascotas(){
+        likes = new ArrayList<Like>();
 
 
-        mascotas = new ArrayList<Mascota>();
-
-        mascotas.add(new Mascota("", "26", R.drawable.perrito, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));
-        mascotas.add(new Mascota("", "23", R.drawable.perrito, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));
-        mascotas.add(new Mascota("", "18", R.drawable.perrito, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));
-        mascotas.add(new Mascota("", "15", R.drawable.perrito, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));
-        mascotas.add(new Mascota("", "12", R.drawable.perrito, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));
-        mascotas.add(new Mascota("", " 8", R.drawable.perrito, R.drawable.hueso_del_perro_50, R.drawable.hueso_del_perro_48));
-
+        likes.add(new Like(R.drawable.perrito,8));
+        likes.add(new Like(R.drawable.perrito,0));
+        likes.add(new Like(R.drawable.perrito,5));
+        likes.add(new Like(R.drawable.perrito,13));
+        likes.add(new Like(R.drawable.perrito,1));
+        likes.add(new Like(R.drawable.perrito,7));
+        likes.add(new Like(R.drawable.perrito,3));
+        likes.add(new Like(R.drawable.perrito,4));
+        likes.add(new Like(R.drawable.perrito,0));
+        likes.add(new Like(R.drawable.perrito,5));
+        likes.add(new Like(R.drawable.perrito,16));
+        likes.add(new Like(R.drawable.perrito,3));
+        likes.add(new Like(R.drawable.perrito,1));
 
 
     }
-
-    public void inicializarAdaptador(){
-        MascotaAdaptador adaptador = new MascotaAdaptador(mascotas, getActivity());
-        listaMascotas.setAdapter(adaptador);
-    }
-
 
 }
+

@@ -22,4 +22,7 @@
     <dimen name="padding_cardview_mi_mascota">8dp</dimen>
 
 
+    <dimen name="corner_radius_cardview">4dp</dimen>
+
+
 </resources>

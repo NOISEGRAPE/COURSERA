@@ -4,65 +4,25 @@ package com.noisegrape.mascotasapp.pojo;
  * Created by Miguel on 02/03/2017.
  */
 
-public class Mascota {
+public class Mascota implements Comparable<Mascota>{
+
 
     private int id;
-    private String nombre;
-    private String cantLikes;
     private int foto;
-    private int imgMegusta;
-    private int imgCantRaiting;
+    private String nombre;
+    private String Raza;
+    private int Likes;
 
-    public Mascota(String nombre, String cantLikes, int foto, int imgMegusta, int imgCantRaiting) {
-        this.nombre = nombre;
-        this.cantLikes = cantLikes;
+    public Mascota(int foto, int likes, String nombre, String raza, int id) {
         this.foto = foto;
-        this.imgMegusta = imgMegusta;
-        this.imgCantRaiting = imgCantRaiting;
-    }
-
-    public Mascota() {
-
-    }
-
-    public int getImgMegusta() {
-        return imgMegusta;
-    }
-
-    public void setImgMegusta(int imgMegusta) {
-        this.imgMegusta = imgMegusta;
-    }
-
-    public int getImgCantRaiting() {
-        return imgCantRaiting;
-    }
-
-    public void setImgCantRaiting(int imgCantRaiting) {
-        this.imgCantRaiting = imgCantRaiting;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
+        Likes = likes;
         this.nombre = nombre;
+        Raza = raza;
+        this.id = id;
     }
 
-    public String getCantLikes() {
-        return cantLikes;
-    }
+    public Mascota(){
 
-    public void setCantLikes(String cantLikes) {
-        this.cantLikes = cantLikes;
-    }
-
-    public int getFoto() {
-        return foto;
-    }
-
-    public void setFoto(int foto) {
-        this.foto = foto;
     }
 
     public int getId() {
@@ -73,6 +33,46 @@ public class Mascota {
         this.id = id;
     }
 
+    public int getFoto() {
+        return foto;
+    }
 
+    public void setFoto(int foto) {
+        this.foto = foto;
+    }
 
+    public int getLikes() {
+        return Likes;
+    }
+
+    public void setLikes(int likes) {
+        Likes = likes;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getRaza() {
+        return Raza;
+    }
+
+    public void setRaza(String raza) {
+        Raza = raza;
+    }
+
+    @Override
+    public int compareTo(Mascota o) {
+        if (Likes < o.Likes) {
+            return -1;
+        }
+        if (Likes > o.Likes) {
+            return 1;
+        }
+        return 0;
+    }
 }
