@@ -12,7 +12,7 @@ public final class ConstantesBaseDatos {
     public static final String TABLE_PETS          = "mascota";
     public static final String TABLE_PETS_ID        = "id_mascota";
     public static final String TABLE_PETS_NOMBRE    = "nombre";
-    //public static final String TABLE_PETS_RAZA  = "raza";
+
     public static final String TABLE_PETS_FOTO      = "foto";
 
     public static final String TABLE_LIKES_PET = "mascota_likes";

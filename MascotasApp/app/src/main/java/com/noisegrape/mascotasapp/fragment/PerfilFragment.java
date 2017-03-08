@@ -71,7 +71,7 @@ public class PerfilFragment extends Fragment {
         likes.add(new Like(R.drawable.perrito,5));
         likes.add(new Like(R.drawable.perrito,16));
         likes.add(new Like(R.drawable.perrito,3));
-        likes.add(new Like(R.drawable.perrito,1));
+
 
 
     }
