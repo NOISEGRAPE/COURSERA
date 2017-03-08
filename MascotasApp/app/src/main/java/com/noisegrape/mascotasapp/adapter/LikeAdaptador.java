@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.noisegrape.mascotasapp.R;
+import com.noisegrape.mascotasapp.pojo.Like;
 
 import java.util.ArrayList;
 

@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.noisegrape.mascotasapp.R;
-import com.noisegrape.mascotasapp.adapter.Like;
+import com.noisegrape.mascotasapp.pojo.Like;
 import com.noisegrape.mascotasapp.adapter.LikeAdaptador;
 
 import java.util.ArrayList;
