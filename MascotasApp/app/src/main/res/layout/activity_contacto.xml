@@ -14,8 +14,6 @@
     android:visibility="visible"
     tools:context=".OnTrackMainActivity">
 
-
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -62,4 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnEnviar" />
-</LinearLayout>
+
+
+
+    </LinearLayout>

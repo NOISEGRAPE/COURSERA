@@ -3,25 +3,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.diegovelez.petagram.MascotasActivity">
 
+
+    <item
+        android:id="@+id/mContacto"
+        android:orderInCategory="100"
+        android:title="@string/menu_contacto"
+        app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/mAcercaDe"
+        android:orderInCategory="101"
+        android:title="@string/menu_acerca_de"
+        app:showAsAction="never" />
+
+
     <item
         android:id="@+id/mFavoritos"
         android:icon="@drawable/star"
         app:showAsAction="always"
         android:title="@string/menu_favoritos"
-        android:orderInCategory="100"
+        android:orderInCategory="102"
         />
 
-    <item
-        android:id="@+id/mContacto"
-        android:orderInCategory="101"
-        android:title="@string/menu_contacto"
-        app:showAsAction="never" />
-
-    <item
-        android:id="@+id/mAcercaDe"
-        android:orderInCategory="102"
-        android:title="@string/menu_acerca_de"
-        app:showAsAction="never" />
 
 
 </menu>

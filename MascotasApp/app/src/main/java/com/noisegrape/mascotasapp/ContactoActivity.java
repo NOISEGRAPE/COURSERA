@@ -2,7 +2,6 @@ package com.noisegrape.mascotasapp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -13,18 +12,13 @@ import android.widget.Toast;
 public class ContactoActivity extends AppCompatActivity {
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacto);
+        enviarEmail();
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-
-        if(toolbar!=null){
-            setSupportActionBar(toolbar);
-        }
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     public void enviarEmail(){
@@ -43,7 +37,6 @@ public class ContactoActivity extends AppCompatActivity {
             ex.printStackTrace();
             Toast.makeText(this, "Hubo un error", Toast.LENGTH_SHORT).show();
         }
-
-
     }
+
 }

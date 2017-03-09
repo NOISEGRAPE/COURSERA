@@ -18,6 +18,24 @@
 
 
 
+        <activity android:name=".ContactoActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"
+                ></meta-data>
+        </activity>
+
+
+        <activity android:name=".AcercaActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"
+                ></meta-data>
+        </activity>
+
+
         <activity android:name=".FavoritosActivity"
             android:parentActivityName=".MainActivity">
             <meta-data
@@ -25,6 +43,8 @@
                 android:value=".MainActivity">
             </meta-data>
         </activity>
+
+
 
 
 

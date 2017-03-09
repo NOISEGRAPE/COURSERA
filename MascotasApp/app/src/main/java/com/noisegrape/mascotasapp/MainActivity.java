@@ -55,13 +55,15 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
 
 
+            case R.id.mContacto:
+                i = new Intent(this, ContactoActivity.class);
+                break;
+
+
             case R.id.mAcercaDe:
                 i = new Intent(this, AcercaActivity.class);
                 break;
 
-            case R.id.mContacto:
-                i = new Intent(this, ContactoActivity.class);
-                break;
 
             case R.id.mFavoritos:
                  i = new Intent(this, FavoritosActivity.class);
