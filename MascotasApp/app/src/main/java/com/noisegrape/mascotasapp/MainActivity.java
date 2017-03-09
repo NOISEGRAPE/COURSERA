@@ -1,9 +1,6 @@
 package com.noisegrape.mascotasapp;
 
-import android.app.Dialog;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -12,7 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.Window;
 
 import com.noisegrape.mascotasapp.adapter.PageAdapter;
 import com.noisegrape.mascotasapp.fragment.PerfilFragment;
@@ -59,22 +55,17 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
 
 
+            case R.id.mAcercaDe:
+                i = new Intent(this, AcercaActivity.class);
+                break;
+
+            case R.id.mContacto:
+                i = new Intent(this, ContactoActivity.class);
+                break;
 
             case R.id.mFavoritos:
                  i = new Intent(this, FavoritosActivity.class);
                  break;
-
-
-            case R.id.mContacto:
-                showDialogoContacto();
-                break;
-
-
-            case R.id.mAcercaDe:
-                showDialogoAcercaDe();
-                break;
-
-
         }
 
         startActivity(i);
@@ -84,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+/*
     private void showDialogoContacto() {
         final Dialog dialog = new Dialog(MainActivity.this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -108,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
 
         dialog.show();
     }
-
+*/
 
 
 
